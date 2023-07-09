@@ -14,5 +14,8 @@
     "@types/node": "^18",
     "nuxt": "^3.6.2",
     "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "swiper": "^10.0.4"
   }
 }
