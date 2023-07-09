@@ -83,37 +83,16 @@
   }
 }
 
-@mixin container() {
-  width: 100%;
-  padding: 4rem 1rem;
+@mixin responsiveFont($sizeLg: 32px, $sizeMd: 24px, $sizeSm: 18px) {
+  font-weight: 400;
+  font-size: $sizeLg;
+  line-height: 1.31;
+  text-align: center;
 
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-    }
+  @media screen and (max-width: 800px) {
+    font-size: $sizeMd;
   }
-
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-    }
+  @media screen and (max-width: 576px) {
+    font-size: $sizeSm;
   }
 }
