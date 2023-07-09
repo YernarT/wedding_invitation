@@ -17,6 +17,7 @@
 
 @mixin flexCenter($direction: row, $gap: 0) {
   display: flex;
+  flex-direction: $direction;
   justify-content: center;
   align-items: center;
   gap: $gap;
