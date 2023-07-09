@@ -1,0 +1,28 @@
+/**
+ * Reset CSS Basic styles
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* 移动端 click 事件 触发的 :active 背景色 变更 */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Global font */
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-display: swap;
+  color: var(--c-text);
+
+  /* Surface */
+  max-width: 100dvw;
+  min-height: 100dvh;
+  background: #f7f7f7;
+}

@@ -1,0 +1,8 @@
+:root {
+  --c-primary: #5d48b3;
+  --c-title: #5d48b3;
+  --c-text: #3d3d3d;
+  --c-secondary: rgb(61, 61, 61);
+
+  --transition: 400ms linear;
+}
