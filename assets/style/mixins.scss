@@ -51,8 +51,8 @@
 // $onlyOnHover options: `1` | `0`
 @mixin useScroll($type: thin, $onlyOnHover: 0) {
   &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     background: transparent;
 
     @if ($type == none) {
