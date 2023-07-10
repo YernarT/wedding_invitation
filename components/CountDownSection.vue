@@ -5,34 +5,65 @@
     <div class="list">
       <div class="block">
         <div class="circle">
-          <span class="value">0</span>
+          <span class="value">{{ getCountDown().days }}</span>
         </div>
         <span class="label">күн</span>
       </div>
 
       <div class="block">
         <div class="circle">
-          <span class="value">0</span>
+          <span class="value">{{ getCountDown().hours }}</span>
         </div>
         <span class="label">сағат</span>
       </div>
 
       <div class="block">
         <div class="circle">
-          <span class="value">0</span>
+          <span class="value">{{ getCountDown().minutes }}</span>
         </div>
         <span class="label">минут</span>
       </div>
 
       <div class="block">
         <div class="circle">
-          <span class="value">0</span>
+          <span class="value">{{ getCountDown().seconds }}</span>
         </div>
         <span class="label">секунд</span>
       </div>
     </div>
+
+    <input type="hidden" :key="forceUpdateHelper.toString()" />
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUpdated } from "vue";
+
+const forceUpdateHelper = ref({});
+
+const getCountDown = () => {
+  const deadline = new Date("2023-08-30 18:00:00");
+  const now = new Date();
+
+  // This code from `ChatGPT-3.5`
+  const timeDiff = deadline.getTime() - now.getTime();
+  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  let remainingMilliseconds = timeDiff % (1000 * 60 * 60 * 24);
+  const hours = Math.floor(remainingMilliseconds / (1000 * 60 * 60));
+  remainingMilliseconds %= 1000 * 60 * 60;
+  const minutes = Math.floor(remainingMilliseconds / (1000 * 60));
+  remainingMilliseconds %= 1000 * 60;
+  const seconds = Math.floor(remainingMilliseconds / 1000);
+
+  return { days, hours, minutes, seconds };
+};
+
+onMounted(() => {
+  setInterval(() => {
+    forceUpdateHelper.value = {};
+  }, 1000);
+});
+</script>
 
 <style scoped lang="scss">
 @import "~/assets/style/mixins.scss";
@@ -45,7 +76,7 @@
   .list {
     width: calc(calc(56px + 20px) * 4 + 8px * 3);
     margin: 24px auto 0 auto;
-    
+
     @include flex(
       $justifyContent: space-evenly,
       $alignItems: center,
