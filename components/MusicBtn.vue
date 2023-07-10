@@ -17,16 +17,29 @@
       src="~/assets/image/help-text.png"
       alt="Help text"
     />
+
+    <audio ref="audioDOM" :src="BGM"></audio>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import BGM from "~/assets/audio/piano-bgm.mp3";
 
+const audioDOM = ref<HTMLAudioElement>();
 const isPlayed = ref(false);
 
 const handleClick = () => {
   isPlayed.value = !isPlayed.value;
+
+  if (isPlayed.value) {
+    if (audioDOM.value) {
+      audioDOM.value.currentTime = 0;
+      audioDOM.value.play();
+    }
+  } else {
+    audioDOM.value?.pause();
+  }
 };
 </script>
 
