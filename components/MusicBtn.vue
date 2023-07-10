@@ -18,7 +18,7 @@
       alt="Help text"
     />
 
-    <audio ref="audioDOM" :src="BGM"></audio>
+    <audio loop ref="audioDOM" :src="BGM"></audio>
   </div>
 </template>
 
