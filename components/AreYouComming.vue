@@ -7,28 +7,70 @@
       type="text"
       placeholder="Аты-жөніңізді жазыңыз"
       maxlength="60"
+      ref="name"
     />
 
     <ul class="options">
-      <li class="option">
-        <input type="checkbox" />
-        <span>Келемін, бұйырса</span>
-      </li>
-      <li class="option">
-        <input type="checkbox" />
-        <span>Өкінішке орай, келе алмаймын</span>
-      </li>
-      <li class="option">
-        <input type="checkbox" />
-        <span>Жұбайыммен келемін</span>
+      <li
+        v-for="(option, index) in options"
+        :key="index"
+        class="option"
+        @click="handleSelect(index)"
+      >
+        <input type="checkbox" :checked="option.isSelected" />
+        <span>{{ option.text }}</span>
       </li>
     </ul>
 
-    <button class="submit">Жауапты жіберу</button>
+    <button class="submit" @click="handleSubmit">Жауапты жіберу</button>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, computed } from "vue";
+
+const name = ref<HTMLInputElement>();
+const options = ref([
+  {
+    text: "Келемін, бұйырса",
+    isSelected: false,
+  },
+  {
+    text: "Өкінішке орай, келе алмаймын",
+    isSelected: false,
+  },
+  {
+    text: "Жұбайыммен келемін",
+    isSelected: false,
+  },
+]);
+
+const decide = computed(() => {
+  return options.value.find((option) => option.isSelected);
+});
+
+const handleSelect = (index: number) => {
+  options.value = options.value.map((option, _index) => ({
+    ...option,
+    isSelected: _index === index ? !option.isSelected : false,
+  }));
+};
+
+const handleSubmit = () => {
+  if (name.value!.value === "") {
+    console.log("没有名字");
+    return;
+  }
+
+  if (decide.value?.isSelected === undefined) {
+    console.log("没有选择");
+    return;
+  }
+
+  console.log("name: ", name.value!.value);
+  console.log("decide: ", decide.value!.text);
+};
+</script>
 
 <style scoped lang="scss">
 @import "~/assets/style/mixins.scss";
@@ -70,6 +112,7 @@
     @include flex($direction: column, $gap: 8px);
 
     .option {
+      width: 100%;
       list-style: none;
       cursor: pointer;
       @include flex($alignItems: center, $gap: 8px);
