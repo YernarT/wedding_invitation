@@ -5,6 +5,6 @@ export default defineNuxtConfig({
   css: [
     "~/assets/style/variables.css",
     "~/assets/style/reset.css",
-    "~/assets/style/btn.css",
+    "~/assets/style/global.css",
   ],
 });

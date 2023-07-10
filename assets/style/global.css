@@ -1,0 +1,35 @@
+/**
+ * Button active effect
+ */
+
+.itisit-btn {
+  transform-origin: center center;
+  transition: transform var(--transition);
+}
+.itisit-btn:active {
+  transform: translate3d(0, 2px, 0) scale(0.91);
+}
+
+/**
+* Global click effect
+*/
+.itisit-heart {
+  position: fixed;
+  top: var(--y);
+  left: var(--x);
+  z-index: 99;
+  filter: drop-shadow(0 0 2px #ed143d);
+
+  animation: ascension 666ms linear 88ms;
+}
+
+@keyframes ascension {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0.233;
+    transform: translate3d(0, -12px, 0);
+  }
+}
