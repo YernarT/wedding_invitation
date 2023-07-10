@@ -22,7 +22,7 @@
       </li>
     </ul>
 
-    <button class="submit" @click="handleSubmit">Жауапты жіберу</button>
+    <button class="itisit-btn submit" @click="handleSubmit">Жауапты жіберу</button>
   </section>
 </template>
 

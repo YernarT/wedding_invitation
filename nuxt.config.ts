@@ -2,5 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  css: ["~/assets/style/variables.css", "~/assets/style/reset.css"],
+  css: [
+    "~/assets/style/variables.css",
+    "~/assets/style/reset.css",
+    "~/assets/style/btn.css",
+  ],
 });

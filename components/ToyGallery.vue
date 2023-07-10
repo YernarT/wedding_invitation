@@ -1,6 +1,6 @@
 <template>
   <section class="toy-gallery">
-    <button class="open-btn">
+    <button class="itisit-btn open-btn">
       <span>Тойдың фотолары</span>
       <img src="~/assets/image/camera.png" alt="Camera" />
     </button>
