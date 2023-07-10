@@ -1,34 +1,34 @@
 <template>
   <section class="count-down">
-    <span>Тойдың басталуына:</span>
+    <span v-once>Тойдың басталуына:</span>
 
     <div class="list">
       <div class="block">
         <div class="circle">
           <span class="value">{{ getCountDown().days }}</span>
         </div>
-        <span class="label">күн</span>
+        <span v-once class="label">күн</span>
       </div>
 
       <div class="block">
         <div class="circle">
           <span class="value">{{ getCountDown().hours }}</span>
         </div>
-        <span class="label">сағат</span>
+        <span v-once class="label">сағат</span>
       </div>
 
       <div class="block">
         <div class="circle">
           <span class="value">{{ getCountDown().minutes }}</span>
         </div>
-        <span class="label">минут</span>
+        <span v-once class="label">минут</span>
       </div>
 
       <div class="block">
         <div class="circle">
           <span class="value">{{ getCountDown().seconds }}</span>
         </div>
-        <span class="label">секунд</span>
+        <span v-once class="label">секунд</span>
       </div>
     </div>
 
@@ -44,6 +44,10 @@ const forceUpdateHelper = ref({});
 const getCountDown = () => {
   const deadline = new Date("2023-08-30 18:00:00");
   const now = new Date();
+
+  if (now > deadline) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
 
   // This code from `ChatGPT-3.5`
   const timeDiff = deadline.getTime() - now.getTime();
