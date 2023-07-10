@@ -36,15 +36,16 @@
   </Html>
 </template>
 
-<script setup>
-import { onMounted, onBeforeUnmount } from '.nuxt/imports';
-
-
-</script>
+<script setup />
 
 <style lang="scss">
-* {
-  /* background: red; */
-  /* 鼠标点击任何区域，冒出爱心 */
+@import "~/assets/style/mixins.scss";
+
+body {
+  @include useScroll;
+
+  @media screen and (max-width: 576px) {
+    @include useScroll($type: none);
+  }
 }
 </style>
