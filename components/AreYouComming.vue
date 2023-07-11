@@ -77,17 +77,9 @@ const handleSubmit = () => {
     return;
   }
 
-  console.log("name: ", name.value!.value);
-  console.log("decide: ", decide.value!.text);
-
-  // snackbar.add({
-  //   type: "success",
-  //   text: "Сәтті жіберілді!",
-  // });
-  snackbar.add({
-    type: "info",
-    text: "Функция дайын емес, әрекетті кейінірек қайталаңыз",
-  });
+  window.location.href = `https://wa.me/7088108576?text=${
+    name.value!.value
+  }, %0A${decide.value!.text}`;
 };
 </script>
 
