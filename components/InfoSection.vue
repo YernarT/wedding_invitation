@@ -16,7 +16,7 @@
     </div>
 
     <div class="mini-block-1">
-      <span>Мекенжайы:</span>
+      <span>Тойдың уақыты:</span>
       <strong>30.08.2023 жыл</strong>
       <span>Сағат 18:00 де</span>
     </div>
@@ -24,7 +24,7 @@
     <img class="flower-1" src="~/assets/image/flower.png" alt="Flower" />
 
     <div class="mini-block-2">
-      <span>Тойдың уақыты:</span>
+      <span>Мекенжайы:</span>
       <strong>Нұрай тойханасы</strong>
       <span>Аягоз қаласы</span>
       <a
