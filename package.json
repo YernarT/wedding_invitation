@@ -16,6 +16,7 @@
     "sass": "^1.63.6"
   },
   "dependencies": {
+    "nuxt-snackbar": "^1.0.3",
     "swiper": "^10.0.4"
   }
 }

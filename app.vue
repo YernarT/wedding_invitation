@@ -32,6 +32,7 @@
 
     <Body>
       <NuxtPage />
+      <NuxtSnackbar />
     </Body>
   </Html>
 </template>

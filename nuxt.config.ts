@@ -7,4 +7,12 @@ export default defineNuxtConfig({
     "~/assets/style/reset.css",
     "~/assets/style/global.css",
   ],
+
+  modules: ["nuxt-snackbar"],
+
+  snackbar: {
+    top: true,
+    right: true,
+    duration: 3000,
+  },
 });
