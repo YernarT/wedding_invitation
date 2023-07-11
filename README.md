@@ -1,13 +1,32 @@
+# Той бағақ
+
+> Тек көру және үйрену үшін, коммерциялық пайдалануға тыйым салынады.
+
+> Басып [Онлайн шолу](https://toy-bagak.kz/)
+
+---
+
+## Жоба
+
+Қарапайым онлайн бағақ.
+
+Nuxt3.6 + Typescript, Scss көмегімен жазылған
+
 ## TODO & BUG
 
-表单（email 发送）
+Add `Parallax` effect
 
-toy gallery 提示
+---
 
-倒计时
+## Нәтижелер
 
-parralex特效
+<img src="./result/screenshot_1.jpg" width="300" height="500" style="margin: 0 8px 8px 0" />
+<img src="./result/screenshot_2.jpg" width="300" height="500" style="margin: 0 8px 8px 0" />
+<img src="./result/screenshot_3.jpg" width="300" height="500" style="margin: 0 8px 8px 0" />
+<img src="./result/screenshot_4.jpg" width="300" height="500" style="margin: 0 8px 8px 0" />
 
-全局点击出 ♥
+---
 
-购买域名，主机
+## Overview
+
+<video src="./result/overview.mp4" width="300" height="500"  loop muted controls></video>
