@@ -14,9 +14,13 @@
       <Meta name="keywords" content="Той Бағақ" />
       <Meta name="author" content="https://github.com/YernarT" />
 
+      <Meta property="og:url" content="https://toy-bagak.kz/" />
       <Meta property="og:title" content="Самғар & Айшат" />
       <Meta property="og:description" content="Самғар мен Айшат үйлену тойы" />
-      <Meta property="og:image" content="/favicon.ico" />
+      <Meta property="og:image" content="https://img95.699pic.com/element/40207/0056.png_860.png" />
+      <Meta property="og:site_name" content="Самғар & Айшат" />
+      <Meta property="og:type" content="website" />
+      <Meta property="og:locale" content="kk_KZ" />
 
       <Link rel="icon" href="/favicon.ico" />
 
