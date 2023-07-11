@@ -1,11 +1,33 @@
 <template>
   <section class="toy-gallery">
-    <button class="itisit-btn open-btn">
+    <button class="itisit-btn open-btn" @click="showGallery">
       <span>Тойдың фотолары</span>
       <img src="~/assets/image/camera.png" alt="Camera" />
     </button>
   </section>
 </template>
+
+<script setup lang="ts">
+const snackbar = useSnackbar();
+
+const showGallery = () => {
+  const deadline = new Date("2023-08-30 18:00:00");
+  const now = new Date();
+
+  if (now < deadline) {
+    snackbar.add({
+      type: "info",
+      text: "Той аяқталғанда шығады, күтіңіз~",
+    });
+    return;
+  }
+
+  snackbar.add({
+    type: "info",
+    text: "Суреттер дайын емес, әрекетті кейінірек қайталаңыз",
+  });
+};
+</script>
 
 <style scoped lang="scss">
 @import "~/assets/style/mixins.scss";

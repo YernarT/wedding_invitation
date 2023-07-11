@@ -22,12 +22,16 @@
       </li>
     </ul>
 
-    <button class="itisit-btn submit" @click="handleSubmit">Жауапты жіберу</button>
+    <button class="itisit-btn submit" @click="handleSubmit">
+      Жауапты жіберу
+    </button>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
+
+const snackbar = useSnackbar();
 
 const name = ref<HTMLInputElement>();
 const options = ref([
@@ -58,17 +62,32 @@ const handleSelect = (index: number) => {
 
 const handleSubmit = () => {
   if (name.value!.value === "") {
-    console.log("没有名字");
+    snackbar.add({
+      type: "warning",
+      text: "Аты-жөніңізді ұмытпаңыз",
+    });
     return;
   }
 
   if (decide.value?.isSelected === undefined) {
-    console.log("没有选择");
+    snackbar.add({
+      type: "warning",
+      text: "Келесізбе?",
+    });
     return;
   }
 
   console.log("name: ", name.value!.value);
   console.log("decide: ", decide.value!.text);
+
+  // snackbar.add({
+  //   type: "success",
+  //   text: "Сәтті жіберілді!",
+  // });
+  snackbar.add({
+    type: "info",
+    text: "Функция дайын емес, әрекетті кейінірек қайталаңыз",
+  });
 };
 </script>
 
