@@ -2,11 +2,24 @@
  * Reset CSS Basic styles
  */
 
+@font-face {
+  font-weight: 400;
+  font-family: "UbuntuMono";
+  src: url("@/assets/fonts/anonym/UbuntuMono-R.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "UbuntuMono";
+  src: url("@/assets/fonts/anonym/UbuntuMono-B.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "UbuntuMono", sans-serif;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 html,
@@ -15,7 +28,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 
   /* Global font */
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "UbuntuMono", sans-serif;
   font-size: 22px;
   font-weight: 400;
   font-display: swap;

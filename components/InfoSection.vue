@@ -22,7 +22,7 @@
       <span>Сағат 13:00 де</span>
     </div>
 
-    <img class="flower-1" src="~/assets/image/flower.png" alt="Flower" />
+    <img class="flower-1" src="~/assets/image/oiu.jpg" alt="Flower" />
 
     <div class="mini-block-2">
       <span>Мекенжайы:</span>
@@ -40,7 +40,7 @@
     </div>
 
     <Gallery />
-    <img class="flower-2" src="~/assets/image/flower.png" alt="Flower" />
+    <img class="flower-2" src="~/assets/image/oiu.jpg" alt="Flower" />
   </section>
 </template>
 
@@ -134,26 +134,26 @@
   }
 
   [class^="flower"] {
-    width: 460px;
-    height: 460px;
+    width: 440px;
+    height: 440px;
     transform: translate(-140px, 0) rotate(45deg);
     @include positioned($left: 0);
 
     @media screen and (max-width: 1080px) {
-      width: 330px;
-      height: 330px;
+      width: 310px;
+      height: 310px;
       transform: translate(-140px, 15%) rotate(45deg);
     }
 
     @media screen and (max-width: 992px) {
-      width: 265px;
-      height: 265px;
+      width: 245px;
+      height: 245px;
       transform: translate(-120px, 35%) rotate(45deg);
     }
 
     @media screen and (max-width: 576px) {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       transform: translate(-60px, 35%) rotate(45deg);
     }
   }

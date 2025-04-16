@@ -12,6 +12,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount } from "vue";
 import heartSVG from "~/assets/image/heart.svg?inline";
+import Bg from "~/assets/image/bg.jpg";
 
 const globalClickHanlder = (e: MouseEvent) => {
   const { clientX, clientY } = e;
