@@ -5,13 +5,13 @@
 @font-face {
   font-weight: 400;
   font-family: "UbuntuMono";
-  src: url("@/assets/fonts/ubuntu/UbuntuMono-R.ttf");
+  src: url("@/assets/fonts/ubuntumono/UbuntuMono-R.ttf");
 }
 
 @font-face {
   font-weight: 700;
   font-family: "UbuntuMono";
-  src: url("@/assets/fonts/ubuntu/UbuntuMono-B.ttf");
+  src: url("@/assets/fonts/ubuntumono/UbuntuMono-B.ttf");
 }
 
 * {
