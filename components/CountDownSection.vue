@@ -37,12 +37,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUpdated } from "vue";
+import { ref, onMounted } from "vue";
 
 const forceUpdateHelper = ref({});
 
 const getCountDown = () => {
-  const deadline = new Date("2023-08-30 18:00:00");
+  const deadline = new Date("2025-05-01 13:00:00");
   const now = new Date();
 
   if (now > deadline) {

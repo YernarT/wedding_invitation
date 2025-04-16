@@ -77,7 +77,7 @@ const handleSubmit = () => {
     return;
   }
 
-  window.location.href = `https://wa.me/7088108576?text=${
+  window.location.href = `https://wa.me/7022633383?text=${
     name.value!.value
   }, %0A${decide.value!.text}`;
 };

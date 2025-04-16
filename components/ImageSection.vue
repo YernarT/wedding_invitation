@@ -3,8 +3,8 @@
     <div class="images">
       <img
         class="banner"
-        src="~/assets/image/samgar_aishat_1.jpg"
-        alt="Самғар & Айшат"
+        src="~/assets/image/cover.jpeg"
+        alt="Мұрат & Әлім & Салтанат"
       />
       <img
         class="bottom-angle"

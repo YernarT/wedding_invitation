@@ -6,40 +6,37 @@
       көрші-қолаң, дос-жарандар!
     </h3>
 
-    <p class="text">Сіздерді балаларымыз</p>
+    <p class="text">Сіздерді немереміз</p>
 
-    <h1 class="newlyweds">Самғар мен Айшат</h1>
+    <h1 class="newlyweds">Әлімнің</h1>
 
     <div class="invite">
-      шаңырақ көтеру тойына арналған<br />
-      салтанатты ақ дастарқанымыздың<br />
-      қадірлі қонағы болуға шақырамыз
+      1 жас тұсау кесер тойына <br />
+      арналған дастарханымыздың <br />
+      қадірлі қонағы болуға шақырамыз!
     </div>
 
     <div class="mini-block-1">
-      <span>Тойдың уақыты:</span>
-      <strong>30.08.2023 жыл</strong>
-      <span>Сағат 18:00 де</span>
+      <span>Тойдың салтанаты:</span>
+      <strong>01.05.2025 жыл</strong>
+      <span>Сағат 13:00 де</span>
     </div>
 
     <img class="flower-1" src="~/assets/image/flower.png" alt="Flower" />
 
     <div class="mini-block-2">
       <span>Мекенжайы:</span>
-      <strong>Нұрай тойханасы</strong>
-      <span>Аягоз қаласы</span>
-      <a
-        href="https://2gis.kz/semey/directions/points/%7C80.422272%2C47.969312%3B70030076608124422?m=80.42303%2C47.969268%2F18.5"
-        target="_blank"
-        class="address"
-      >
+      <strong>Сұлтан Сарай мейрамханасы</strong>
+      <span>Алматы қаласы</span>
+      <a href="https://2gis.kz/almaty/geo/70000001023455019/76.817431,43.205486"
+        target="_blank" class="address">
         <img src="~/assets/image/2gis.png" alt="2GIS" />
       </a>
     </div>
 
     <div class="mini-block-3">
       <span>Той иелері:</span>
-      <strong>Еркін - Мая</strong>
+      <strong>Тұрабай & Ляйля</strong>
     </div>
 
     <Gallery />
@@ -61,6 +58,7 @@
     margin-bottom: 60px;
     text-transform: uppercase;
     @include responsiveFont($sizeLg: 52px, $sizeMd: 32px, $sizeSm: 24px);
+
     @media screen and (max-width: 576px) {
       margin-bottom: 32px;
     }
@@ -84,6 +82,7 @@
     @media screen and (max-width: 800px) {
       font-size: 52px;
     }
+
     @media screen and (max-width: 576px) {
       font-size: 32px;
       margin-bottom: 32px;
@@ -99,6 +98,7 @@
     @media screen and (max-width: 800px) {
       margin-bottom: 56px;
     }
+
     @media screen and (max-width: 576px) {
       margin-bottom: 32px;
     }
@@ -127,6 +127,7 @@
     @media screen and (max-width: 800px) {
       margin-bottom: 56px;
     }
+
     @media screen and (max-width: 576px) {
       margin-bottom: 32px;
     }
@@ -164,6 +165,7 @@
     @media screen and (max-width: 992px) {
       transform: translate(calc(-100% + 100px), 15%) rotate(-40deg);
     }
+
     @media screen and (max-width: 576px) {
       transform: translate(calc(-100% + 56px), 8%) rotate(-40deg);
     }

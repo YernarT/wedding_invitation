@@ -1,19 +1,12 @@
 <template>
   <div class="gallery">
-    <swiper
-      grabCursor
-      centeredSlides
-      :modules="modules"
-      :effect="'coverflow'"
-      :slidesPerView="'auto'"
-      :coverflowEffect="{
-        rotate: 35,
-        stretch: 0,
-        depth: 100,
-        modifier: 0.85,
-        slideShadows: true,
-      }"
-    >
+    <swiper grabCursor centeredSlides :modules="modules" :effect="'coverflow'" :slidesPerView="'auto'" :coverflowEffect="{
+      rotate: 35,
+      stretch: 0,
+      depth: 100,
+      modifier: 0.85,
+      slideShadows: true,
+    }">
       <swiper-slide v-for="photoSrc in galleryPhotos" :key="photoSrc">
         <img :src="photoSrc" class="gallery-photo" />
       </swiper-slide>
@@ -28,11 +21,11 @@ import { EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-import SA_2 from "~/assets/image/samgar_aishat_2.jpg";
-import SA_3 from "~/assets/image/samgar_aishat_3.jpg";
-import SA_4 from "~/assets/image/samgar_aishat_4.jpg";
-import SA_5 from "~/assets/image/samgar_aishat_5.jpg";
-import SA_6 from "~/assets/image/samgar_aishat_6.jpg";
+import A_1 from "~/assets/image/alim-1.jpeg";
+import A_2 from "~/assets/image/alim-2.jpeg";
+import A_3 from "~/assets/image/alim-3.jpeg";
+import A_4 from "~/assets/image/alim-4.jpeg";
+import A_5 from "~/assets/image/alim-5.jpeg";
 
 export default {
   components: {
@@ -43,7 +36,7 @@ export default {
   setup() {
     return {
       modules: [EffectCoverflow],
-      galleryPhotos: [SA_2, SA_3, SA_4, SA_5, SA_6],
+      galleryPhotos: [A_1, A_2, A_3, A_4, A_5],
     };
   },
 };

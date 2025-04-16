@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import BGM from "~/assets/audio/piano-bgm.mp3";
+import BGM from "~/assets/audio/bgm.mp3";
 
 const audioDOM = ref<HTMLAudioElement>();
 const isPlayed = ref(false);
